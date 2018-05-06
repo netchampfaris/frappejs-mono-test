@@ -1,0 +1,31 @@
+{
+  "name": "frappe-accounting",
+  "description": "Simple Accounting app for everyone",
+  "productName": "Frappe Accounting",
+  "version": "1.0.0",
+  "author": {
+    "name": "Frappe Technologies Pvt. Ltd.",
+    "email": "hello@frappe.io"
+  },
+  "build": {
+    "appId": "io.frappe.accounting"
+  },
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha tests",
+    "start": "nodemon server.js",
+    "watch": "rollup -c --watch",
+    "electron": "EIO_WS_ENGINE=ws electron main.js",
+    "electron-pack": "electron-packager . --overwrite",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "frappejs": "0.0.5"
+  },
+  "devDependencies": {
+    "electron": "1.8.4",
+    "electron-builder": "^20.6.2",
+    "electron-packager": "^11.2.0"
+  }
+}
